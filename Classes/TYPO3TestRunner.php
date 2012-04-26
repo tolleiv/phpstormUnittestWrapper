@@ -42,14 +42,9 @@ class TYPO3TestRunner extends Runner {
 		self::$baseDir = $workingDirectory . $scriptDirectory;
 		$_SERVER['argv'] = self::appendConfigurationArguments($arguments);
 		$_SERVER['argc'] = count($_SERVER['argv']);
-/*
-		var_dump($_SERVER);
-		var_dump($_REQUEST);
-		var_dump(self::$baseDir);
-		var_dump($_SERVER['argv']);
-*/
-		require(dirname(PATH_thisScript).'/init.php');  ob_end_clean();
-		t3lib_div::flushOutputBuffers();
+
+		require(dirname(PATH_thisScript).'/init.php');
+		print t3lib_div::flushOutputBuffers();
 		include(TYPO3_cliInclude);
 	}
 }

@@ -3,4 +3,4 @@ php_value max_execution_time 0
 
 #RewriteEngine On
 #RewriteBase /tests
-#RewriteRule ^_intellij_phpunit_launcher.php _ij.php [L]
+#RewriteRule ^(.+)/_intellij_phpunit_launcher\.php$ /tests/_ij.php [L]

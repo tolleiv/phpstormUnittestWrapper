@@ -14,6 +14,18 @@ Running the tests
 * Use the context menu for Unittest folders or files to trigger the tests on the server.
 * See them running
 
+Requirements
+============
+
+* Make sure you're using the most recent version of PHPUnit
+* Make sure your mod_rewrite setup is working properly
+
+Known issues
+============
+
+* Location hints don't seem to work
+* Running single test methods is not supported by the phpunit command line interface
+
 License
 =======
 
